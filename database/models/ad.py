@@ -6,7 +6,7 @@ from .base import BaseModel
 
 
 class Ad(BaseModel):
-    __tablename__ = 'application'
+    __tablename__ = 'ad'
 
     chat_name: Mapped[str] = mapped_column(String, nullable=False)
     chat_id: Mapped[str] = mapped_column(Integer, nullable=False)
