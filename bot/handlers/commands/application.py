@@ -3,7 +3,7 @@ from aiogram.dispatcher import FSMContext
 
 from decouple import config
 
-from loader import dp, bot
+from bot.loader import dp, bot
 
 
 @dp.message_handler(text="📝 Murojaat", state="*")

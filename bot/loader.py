@@ -13,3 +13,6 @@ BASE_DIR = Path(__file__).parent
 bot = Bot(token=TOKEN, parse_mode=types.ParseMode.HTML)
 storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
+
+WEBHOOK_PATH = f"/{TOKEN}"
+WEBHOOK_URL = config("WEBHOOK_URL") + WEBHOOK_PATH

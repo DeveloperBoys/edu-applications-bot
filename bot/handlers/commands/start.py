@@ -4,8 +4,8 @@ from aiogram.utils.deep_linking import get_start_link
 
 from decouple import config
 
-from loader import dp
-from keyboards.default import buttons
+from bot.loader import dp
+from bot.keyboards.default import buttons
 
 
 async def create_link(id: int, name: str) -> dict:
@@ -13,7 +13,7 @@ async def create_link(id: int, name: str) -> dict:
     return f"{link}{name}"
 
 
-@dp.message_handler(CommandStart(), state="*")
+@dp.message_handler(CommandStart(), state=None)
 async def start(message: types.Message) -> None:
     link_text = await create_link(id=-1001345206422, name="murtazo")
     args = message.get_args()
